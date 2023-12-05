@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+      "configurations": [
+        {
+            "name": "Django",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "${workspaceRoot}/venv/bin/python",
+            "program": "${workspaceRoot}/manage.py",
+              "args": [
+                  "runserver"
+              ],
+        },
+        {
+            "name": "Celery",
+            "type": "python",
+            "request": "launch",
+            "module": "celery",
+            "console": "integratedTerminal",
+            "args": [
+                "--app",
+                "api.worker.app",
+                "worker",
+                "--loglevel",
+                "DEBUG",
+                "--pool",
+                "solo",
+            ]
+        },
+        {
+            "name": "Celery Beat",
+            "type": "python",
+            "request": "launch",
+            "module": "celery",
+            "console": "integratedTerminal",
+            "args": [
+                "--app",
+                "api.worker.app",
+                "beat"
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Django, Celery, Celery Beat",
+            "configurations": ["Django", "Celery", "Celery Beat"]
+        }
+    ]}
