@@ -11,6 +11,8 @@
               "args": [
                   "runserver"
               ],
+              "preLaunchTask": "start-redis-container",
+              "postDebugTask": "stop-redis-container"
         },
         {
             "name": "Celery",

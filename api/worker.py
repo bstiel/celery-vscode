@@ -1,12 +1,4 @@
 import os
-import json
-import urllib3
-import requests
-import time
-import requests
-from celery import shared_task
-from requests.adapters import HTTPAdapter
-from urllib3 import Retry
 
 
 from celery import Celery

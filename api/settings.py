@@ -71,12 +71,7 @@ WSGI_APPLICATION = "api.wsgi.application"
 DATABASES = {}
 
 
-CELERY_BROKER_URL = "filesystem://"
-CELERY_BROKER_TRANSPORT_OPTIONS = {
-    "data_folder_in": "./.data/broker",
-    "data_folder_out": "./.data/broker",
-}
-
+CELERY_BROKER_URL = "redis://localhost:6379/0"
 
 CELERY_BEAT_SCHEDULE = {
     "scheduler": {

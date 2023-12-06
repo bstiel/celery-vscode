@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start-redis-container",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+              "run",
+              "-d",
+              "--name",
+              "redis",
+              "-p",
+              "6379:6379",
+              "redis:latest"
+            ],
+          },
+          {
+            "label": "stop-redis-container",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+              "rm",
+              "-f",
+              "redis"
+            ],
+          }
+
+    ]
+}
