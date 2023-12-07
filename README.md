@@ -1,4 +1,4 @@
-# Debug Celery Apps via VS Code
+# Debug Celery Apps with VS Code
 
 This repository contains a simple Celery/Django/Redis app that you can start and debug with VS Code.
 
